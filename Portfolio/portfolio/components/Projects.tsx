@@ -28,11 +28,11 @@ export default function MyProjects() {
   ];
 
   return (
-    <div className="mt-10 text-4xl font-bold">
+    <div className="mt-4 text-4xl font-bold ">
         <div className=" text-center mb-8">
             <p className="font-mono text-slate-300">A Small collection of my <span className="font-mono text-blue-500">Personal Projects</span></p>
         </div> 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:ml-10 md:py-4 p-4 ">
       {projectDetails.map((project, index) => (
         <CardSpotlight key={index} radius={300} color="#1e1e1e"  className={`relative w-auto h-auto md:h-[500px] md:w-[400px] rounded-lg   transition-colors duration-300 
             `}>

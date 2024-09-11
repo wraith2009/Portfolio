@@ -22,7 +22,7 @@ export default function TechStackSection() {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center py-16 mt-24 space-y-8 font-bold text-4xl">
+    <section className="flex flex-col items-center justify-center py-16 mt-4 space-y-8 font-bold text-4xl">
       {/* Title */}
       <h2 className="text-4xl font-mono text-center text-slate-300 dark:text-gray-100 tracking-tight">
         My Tech Stacks
