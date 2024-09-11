@@ -10,10 +10,10 @@ const Header: React.FC = () => {
       borderWidth={2}   // Customize the width of the border
       duration={10}     // Customize the shine animation duration
       color={["#00FFAA", "#00D1FF", "#0096FF"]} // Colors for the shine effect
-      className="w-[300px] h-[60px] left-1/2 transform -translate-x-1/2 mt-10 bg-black "
+      className="w-[400px] h-[60px] left-1/2 transform -translate-x-1/2 mt-10 bg-black "
     >
       <div
-        className="w-[298px] h-[58px] shadow-lg rounded-lg py-4 px-6 -mt-[11px] -ml-[11px]"
+        className="w-[398px] h-[58px] shadow-lg rounded-lg py-4 px-6 -mt-[11px] -ml-[11px]"
         style={{
           background: "linear-gradient(135deg, #060d1e, #2b2d34, #060d1e)",
         }}
@@ -36,6 +36,13 @@ const Header: React.FC = () => {
             className="text-slate-200 font-mono hover:text-white cursor-pointer"
           >
             Projects
+          </a>
+
+          <a
+            href="#experience"
+            className="text-slate-200 font-mono hover:text-white cursor-pointer"
+          >
+            Experience
           </a>
           <a
             href="#contact"
