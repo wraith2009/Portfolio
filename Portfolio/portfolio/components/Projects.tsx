@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { FaLink } from "react-icons/fa6";
 import { CardSpotlight } from "./ui/card-spotlight"; 
-
+import Image from "next/image";
 export default function MyProjects() {
   const projectDetails = [
     {
@@ -39,7 +39,7 @@ export default function MyProjects() {
           {/* Card Content */}
           <div className="relative z-10  flex flex-col justify-center items-center ">
             {/* Project Image */}
-            <img
+            <Image
               src={project.imageUrl}
               alt={project.title}
               className="h-[200px] w-[300px] mb-4 rounded-lg "
