@@ -20,7 +20,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
   particlesColor,
 }) => {
   return (
-    <div className="relative min-w-[398px] h-[298px] md:w-[398px] p-6 rounded-lg shadow-lg bg-black text-white mb-40 -mt-[11px] -ml-[11px] ">
+    <div className="relative min-w-[398px]  h-[298px] md:w-[398px] p-6 rounded-lg shadow-lg bg-black text-white mb-40 -mt-[11px] -ml-[11px] ">
       {/* Particles Background */}
       <Particles
         className="absolute inset-0 z-0"

@@ -31,7 +31,7 @@ export default function Home() {
         </a>
       </div>
       <TechStackSection />
-      <section id="projects" className="h-screen">
+      <section id="projects" >
         <MyProjects />
       </section>
 
