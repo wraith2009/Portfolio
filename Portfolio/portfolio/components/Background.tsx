@@ -1,4 +1,4 @@
-import GridPattern from "./GridPattern";
+import GridPattern from "./magicui/animated-grid-pattern";
 
 export default function Background() {
     return (

@@ -1,5 +1,5 @@
-import TypingAnimation from "@/components/TextAnimation";
-import ShimmerButton from "@/components/SimmerButton";
+import TypingAnimation from "@/components/magicui/typing-animation";
+import ShimmerButton from "@/components/magicui/shimmer-button";
 
 export default function Home() {
   return (
