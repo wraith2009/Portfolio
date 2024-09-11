@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ShineBorder from "./shineBorder";
+import ShineBorder from "./magicui/shine-border";
 
 const Header: React.FC = () => {
   return (
