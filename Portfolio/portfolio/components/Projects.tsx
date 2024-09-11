@@ -22,8 +22,8 @@ export default function MyProjects() {
     {
         title: "Portfolio",
         description: "Portfolio Website using Next.js, Tailwind CSS, and Framer Motion. ",
-        imageUrl: "/portfolioimage.jpg", 
-        liveLink: "https://portfolio-inky-sigma.vercel.app/",
+        imageUrl: "/portfolio.jpg", 
+        liveLink: "https://portfolio-two-bice-95.vercel.app/",
     }
   ];
 
