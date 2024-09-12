@@ -11,19 +11,22 @@ export default function MyProjects() {
       title: "Insocial",
       description: "Insocial is a social networking website . It offers real-time messaging 💬, notifications 🔔, posting, liking 👍, commenting 💬 on posts, and personalized feeds tailored to your interests",
       imageUrl: "/insocialImage.jpg", 
-      liveLink: "https://insocial.tech", 
+      liveLink: "https://insocial.tech/", 
+      githubLink:"https://github.com/mayank2153/WhisperHub"
     },
     {
       title: "Deliver",
       description: "Online Food Ordering UI Application using React, Redux, and Parcel. ",
       imageUrl: "/deliverimage.jpg", 
       liveLink: "https://deliver--09.web.app/", 
+      githubLink: "https://github.com/wraith2009/deliver"
     },
     {
         title: "Portfolio",
         description: "Portfolio Website using Next.js, Tailwind CSS, and Framer Motion. ",
-        imageUrl: "/portfolio.jpg", 
+        imageUrl: "portfolio.jpg", 
         liveLink: "https://portfolio-two-bice-95.vercel.app/",
+        githubLink: "https://github.com/wraith2009/Portfolio"
     }
   ];
 
@@ -51,16 +54,26 @@ export default function MyProjects() {
             {/* Project Description */}
             <p className="text-gray-400 text-sm mb-4 ">{project.description}</p>
 
-            {/* Live Link Button */}
-            <Link href={project.liveLink}>
+            <div className="flex gap-10">
+            <a href={project.liveLink}>
               <p
-                
-                
                 className="text-blue-900 text-lg flex gap-2 "
               >
-                <FaLink className="mt-1"/>Live link
+                <FaLink className="mt-1"/>Live Project link
               </p>
-            </Link>
+            </a>
+
+            <a href={project.githubLink}>
+              <p
+                className="text-blue-900 text-lg flex gap-2 "
+              >
+                <FaLink className="mt-1"/>Github link
+              </p>
+            </a>
+            </div>
+            {/* Live Link Button */}
+            
+            
           </div>
         </CardSpotlight>
       ))}

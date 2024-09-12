@@ -9,15 +9,17 @@ import ReachOut from "@/components/ReachOut";
 export default function Home() {
   return (
     <div className="mt-20 ">
-      <div className="text-4xl text-center font-bold">
-          <p className="text-slate-300 font-mono">Turning ideas into reality</p> 
-          <p className="text-slate-300 font-mono">with code is my craft<span className="text-xl ml-2 text-blue-400">— one line at a time.</span></p>
-      </div>
       <TypingAnimation 
-       text="Hi, I am Rahul Bhardwaj, a MERN developer from India." 
-       duration={100} 
-       className="text-slate-300 font-medium text-2xl mt-4"
+        text="Hi, I am Rahul Bhardwaj, a Full Stack developer from India." 
+        duration={100} 
+        className="text-slate-300 font-montserrat text-2xl mt-4"
       ></TypingAnimation>
+      <div className="text-4xl my-2 text-center font-bold">
+          <p className="text-slate-300 font-montserrat text-xl"> I specialize in turning ideas into fully functional web applications</p> 
+          <p className="text-slate-300 font-montserrat text-xl">Whether you are building a product from the ground up or improving an existing one,</p>
+          <span className="text-xl text-blue-500">I can help bring your vision to life with clean, efficient code.</span>
+      </div>
+      
       <div className="flex justify-center items-center mt-8 ">
         <a
           href="/Rahul_Resume.pdf" // Replace with the actual path to your resume file
@@ -25,13 +27,12 @@ export default function Home() {
         >
           <ShimmerButton 
           background="#020617"
-          className="w-48 h-12">
+          className="w-48 h-12 mb-2">
             Resume
           </ShimmerButton>
         </a>
       </div>
-      <TechStackSection />
-      <section id="projects" >
+            <section id="projects" >
         <MyProjects />
       </section>
 
@@ -39,6 +40,8 @@ export default function Home() {
         <MyWorkExperience/>  
       </section> 
       
+      <TechStackSection />
+
       <section id="about">
       <AboutMe />
       </section>
