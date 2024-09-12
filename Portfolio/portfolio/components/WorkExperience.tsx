@@ -40,7 +40,7 @@ export default function MyWorkExperience() {
         position="Full Stack Developer"
         CompanyName = "HillOne Technologies"
         timePeriod="April - August 2023"
-        description="Implemented UI corrections and Built a feature to generate negative test cases for real world api."
+        description="I developed a feature to generate negative test cases for real-world APIs using OpenAI on the backend, and also implemented UI corrections to enhance the user experience."
         technologies={["React", "Redux", "MERN", "AWS"]}
         particlesColor="#00FFFF" // Different color for particles
       />

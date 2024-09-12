@@ -14,9 +14,9 @@ export default function AboutMe(){
             />
             
             <div className="-mt-4 ">
-            <p className="text-center font-mono text-lg text-slate-300 dark:text-gray-100 md:px-20 px-4">
+            <p className="text-center font-montserrat text-lg text-slate-300 dark:text-gray-100 md:px-20 px-4">
                 Hi, I am <span className="text-blue-500">Rahul Bhardwaj</span>, a <span className="text-blue-500">software Developer</span> with a passion for development. I specialize in <span className="text-blue-500">MERN stack</span> and have worked with both clients and for companies. With <span className="text-blue-500">almost 1 years of experience</span>, I’m always looking to create new Technologies.
-                Outside of work, I enjoy workout, which keeps my creativity alive. Let us connect and create something amazing together.
+                Let us connect and create something amazing together.
             </p>
 
             <p className="text-center font-mono text-lg text-slate-300">Connect with me here : </p>
