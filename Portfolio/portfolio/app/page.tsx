@@ -16,7 +16,7 @@ export default function Home() {
       ></TypingAnimation>
       <div className="text-4xl my-2 text-center font-bold">
           <p className="text-slate-300 font-montserrat text-xl"> I specialize in turning ideas into fully functional web applications</p> 
-          <p className="text-slate-300 font-montserrat text-xl">Whether you're building a product from the ground up or improving an existing one,</p>
+          <p className="text-slate-300 font-montserrat text-xl">Whether you are building a product from the ground up or improving an existing one,</p>
           <span className="text-xl text-blue-500">I can help bring your vision to life with clean, efficient code.</span>
       </div>
       
