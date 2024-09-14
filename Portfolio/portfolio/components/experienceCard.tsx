@@ -20,7 +20,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
   particlesColor,
 }) => {
   return (
-    <div className="relative max-w-fit md:min-w-[398px] md:w-[398px] p-6 rounded-lg shadow-lg bg-black text-white mb-40 -mt-[11px] -ml-[11px] ">
+    <div className="relative max-w-fit md:min-w-[398px] h-[300px] p-6 rounded-lg shadow-lg bg-black text-white mb-40 -mt-[11px] -ml-[11px] ">
       {/* Particles Background */}
       <Particles
         className="absolute inset-0 z-0"
@@ -52,11 +52,9 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
         {/* Technologies Used */}
         <div>
           <h3 className="font-sm text-sm mb-2">Technologies Used:</h3>
-          <ul className="list-disc pl-5  ">
-            {technologies.map((tech, index) => (
-              <li key={index} className="text-gray-300 text-sm">{tech}</li>
-            ))}
-          </ul>
+          <p className="text-slate-300 font-mono">
+          {technologies.join(", ")}
+          </p>
         </div>
       </div>
     </div>
