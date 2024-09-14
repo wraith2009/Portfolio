@@ -16,7 +16,7 @@ export default function MyWorkExperience() {
         borderWidth={2} // Customize the border width
         duration={10} // Speed of shine animation
         color={["#FF00FF", "#00FFFF"]}
-        className="min-w-[398px] md:w-[402px] h-[302px] bg-[#020617]" // Multi-color gradient for shine
+        className="max-w-fit md:w-[402px] h-[302px] bg-[#020617]" // Multi-color gradient for shine
       >
       <WorkExperienceCard
         position="Full Stack Developer "
@@ -34,7 +34,7 @@ export default function MyWorkExperience() {
         borderWidth={2} // Customize the border width
         duration={10} // Speed of shine animation
         color={["#FF00FF", "#00FFFF"]}
-        className="min-w-[398px]  md:w-[402px] h-[302px] bg-[#020617]" // Multi-color gradient for shine
+        className="max-w-fit  md:w-[402px] h-[302px] bg-[#020617]" // Multi-color gradient for shine
       >
       <WorkExperienceCard
         position="Full Stack Developer"
