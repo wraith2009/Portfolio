@@ -31,7 +31,7 @@ export default function MyProjects() {
   ];
 
   return (
-    <div className="mt-4 text-4xl font-bold ">
+    <div className="mt-8 text-4xl font-bold">
         <div className=" text-center mb-8">
             <p className="font-mono text-slate-300">A Small collection of my <span className="font-mono text-blue-500">Personal Projects</span></p>
         </div> 

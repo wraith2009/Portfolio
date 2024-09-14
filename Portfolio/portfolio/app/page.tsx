@@ -32,13 +32,16 @@ export default function Home() {
           </ShimmerButton>
         </a>
       </div>
-            <section id="projects" >
-        <MyProjects />
-      </section>
-
+      
       <section id="experience">
         <MyWorkExperience/>  
       </section> 
+      
+      <section id="projects" >
+        <MyProjects />
+      </section>
+
+
       
       <TechStackSection />
 
