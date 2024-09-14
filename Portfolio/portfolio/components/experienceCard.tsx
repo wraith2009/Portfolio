@@ -52,7 +52,7 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
         {/* Technologies Used */}
         <div>
           <h3 className="font-sm text-sm mb-2">Technologies Used:</h3>
-          <p className="text-slate-300 font-mono">
+          <p className="text-slate-300 font-mono text-xl">
           {technologies.join(", ")}
           </p>
         </div>
