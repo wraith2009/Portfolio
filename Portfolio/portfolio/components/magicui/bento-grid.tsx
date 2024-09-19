@@ -29,6 +29,8 @@ const BentoCard = ({
   background,
   Icon,
   description,
+  img,
+  imgClassName,
   href,
   cta,
 }: {
@@ -37,6 +39,8 @@ const BentoCard = ({
   background: ReactNode;
   Icon: any;
   description: string;
+  img?: string;
+  imgClassName?: string;
   href: string;
   cta: string;
 }) => (
@@ -51,7 +55,15 @@ const BentoCard = ({
       className,
     )}
   >
-    <div>{background}</div>
+    <div><div className="w-full h-full absolute">
+          {img && (
+            <img
+              src={img}
+              alt={img}
+              className={cn(imgClassName, "object-cover object-center ")}
+            />
+          )}
+        </div></div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
       <Icon className="h-12 w-12 origin-left transform-gpu  transition-all duration-300 ease-in-out group-hover:scale-75" />
       <h3 className="text-xl font-semibold  dark:text-neutral-300">

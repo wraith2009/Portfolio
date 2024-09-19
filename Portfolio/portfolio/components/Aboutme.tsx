@@ -14,9 +14,11 @@ const About = () => {
         {/* Introduction Card */}
         <BentoCard
           name="Hi, I am Rahul Bhardwaj"
-          className="col-span-1 lg:col-span-2 bg-gradient-to-r from-blue-500 to-green-400 text-slate-300 border-black shadow-lg"
+          className="col-span-1 lg:col-span-2  border-2 text-slate-300 border-white shadow-lg"
           background={<div className="h-full bg-gradient-to-r from-blue-500 to-green-400" />}
           Icon={FaUserTie}
+          img="/grid4.avif"
+          imgClassName="w-full h-full"
           description="A Software Developer with almost 1 year of experience. I specialize in MERN stack development and am passionate about creating innovative technologies."
           href="https://www.linkedin.com/in/rahulbhardwaj95990/"
           cta="Read more"
@@ -25,9 +27,11 @@ const About = () => {
         {/* Specialization and Experience Card */}
         <BentoCard
           name="MERN Stack Specialist"
-          className="col-span-1 bg-gradient-to-r from-purple-500 to-red-400 text-slate-300 border-black shadow-lg"
+          className="col-span-1 bg-black border-2 text-slate-300 border-white shadow-lg"
           background={<div className="h-full bg-gradient-to-r from-purple-500 to-red-400" />}
           Icon={FaLaptopCode}
+          img="/grid 3.avif"
+          imgClassName="w-full h-full"
           description="With experience working with clients and companies, I focus on building full-stack applications that deliver seamless user experiences."
           href="https://insocial.tech"
           cta="See My Work"
@@ -36,9 +40,11 @@ const About = () => {
         {/* Contact Card */}
         <BentoCard
           name="Let us Connect"
-          className="col-span-1 bg-gradient-to-r from-yellow-600 to-neutral-500 text-slate-300 border-black shadow-lg"
+          className="col-span-1 bg-black border-2 text-slate-300 border-white shadow-lg"
           background={<div className="h-full bg-gradient-to-r from-indigo-500 to-teal-400" />}
           Icon={FaLink}
+          img="/grid 3.avif"
+          imgClassName="w-full h-full"
           description="I am always looking to collaborate on new and exciting projects. Whether it is for technical expertise or creative solutions, I am ready to contribute."
           href="https://x.com/WGaming28441"
           cta="Contact Me"
@@ -47,9 +53,11 @@ const About = () => {
         {/* Email Card */}
         <BentoCard
           name="Reach Me via Email"
-          className="col-span-1 lg:col-span-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-slate-300 border-black shadow-lg"
+          className="col-span-1 lg:col-span-2 bg-black text-slate-300 border-2 border-white shadow-lg"
           background={<div className="h-full bg-gradient-to-r from-orange-500 to-pink-400" />}
           Icon={FaEnvelope}
+          img="/grid5.avif"
+          imgClassName="w-full h-full"
           description="Feel free to reach out via email if you want to hire me or collaborate on a project. Let us create something amazing together!"
           href="mailto:rbh97995@gmail.com"
           cta="Send Mail"
