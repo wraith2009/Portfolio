@@ -40,13 +40,13 @@ export default function MyProjects() {
   <div className="flex justify-center items-center min-h-screen">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:pb-4 p-4 md:px-2">
     {projectDetails.map((project, index) => (
-      <div key={index} className="flex flex-col gap-4  items-center md:w-[320px] w-fit border-2 rounded-2xl border-gray-600">
+      <div key={index} className="flex flex-col gap-4 md:w-[320px] w-fit border-2 rounded-2xl border-gray-600 bg-black">
         {/* Project Image */}
         <div className="w-full h-[200px] overflow-hidden relative">
           <img
             src={project.imageUrl}
             alt={project.title}
-            className="h-full w-full object-cover rounded-2xl"
+            className="h-full w-full object-cover rounded-2xl border-b-2 border-gray-400"
           />
         </div>
 
@@ -57,19 +57,19 @@ export default function MyProjects() {
         <p className="text-gray-400 text-sm mb-4 px-2 min-h-24">{project.description}</p>
 
         {/* Links */}
-        <div className="flex gap-10 mb-8">
+        <div className="flex gap-10 mb-8 items-center justify-center">
           {project.liveLink && (
             <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-              <p className="text-blue-900 text-lg flex gap-2">
-                <FaLink className="mt-1" /> Live Link
-              </p>
+              <button className="text-white bg-blue-600 hover:bg-blue-500 text-sm px-4 py-2 rounded-md flex items-center gap-2">
+                      <FaLink /> Website
+              </button>
             </a>
           )}
           {project.githubLink && (
             <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-              <p className="text-blue-900 text-lg flex gap-2">
-                <FaLink className="mt-1" /> GitHub
-              </p>
+              <button className="text-white bg-blue-600 hover:bg-blue-500 text-sm px-4 py-2 rounded-md flex items-center gap-2">
+                      <FaLink /> GitHub
+              </button>
             </a>
           )}
         </div>

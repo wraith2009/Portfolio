@@ -5,8 +5,8 @@ export default function Background() {
 
         <div className="fixed inset-0 -z-10 bg-black">
             <GridPattern
-            width={40}
-            height={40}
+            width={80}
+            height={80}
             maxOpacity={0.008}
             numSquares={30}
             duration={6}
