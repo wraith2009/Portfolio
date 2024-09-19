@@ -5,10 +5,14 @@ import MyProjects from "@/components/Projects";
 import MyWorkExperience from "@/components/WorkExperience";
 import AboutMe from "@/components/Aboutme";
 // import ReachOut from "@/components/ReachOut";
-
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Rahul Bhardwaj',
+};
 export default function Home() {
   return (
-    <div className="mt-20 ">
+    <div className="py-20 ">
       <TypingAnimation 
         text="Hi, I am Rahul Bhardwaj, a Full Stack developer from India." 
         duration={100} 

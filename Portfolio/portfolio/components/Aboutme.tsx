@@ -36,7 +36,7 @@ const About = () => {
         {/* Contact Card */}
         <BentoCard
           name="Let us Connect"
-          className="col-span-1 bg-gradient-to-r from-purple-600 to-gray-100 text-slate-300 border-black shadow-lg"
+          className="col-span-1 bg-gradient-to-r from-yellow-600 to-neutral-500 text-slate-300 border-black shadow-lg"
           background={<div className="h-full bg-gradient-to-r from-indigo-500 to-teal-400" />}
           Icon={FaLink}
           description="I am always looking to collaborate on new and exciting projects. Whether it is for technical expertise or creative solutions, I am ready to contribute."
