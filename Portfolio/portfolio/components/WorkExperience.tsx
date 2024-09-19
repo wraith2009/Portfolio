@@ -22,7 +22,7 @@ export default function MyWorkExperience() {
         position="Full Stack Developer "
         CompanyName="Freelance"
         timePeriod="(present)"
-        description="Currently building a CMS system"
+        description="Currently building a comprehensive Content Management System (CMS) to streamline the management of web content."
         technologies={[ "Next.js", "Tailwind CSS", "Sequelize", "Postgres"]}
         particlesColor="#FF00FF" // Example color for particles
       />

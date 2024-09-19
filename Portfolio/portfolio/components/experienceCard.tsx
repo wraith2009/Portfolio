@@ -1,6 +1,7 @@
 // WorkExperienceCard.tsx
 import React from "react";
 import Particles from "./magicui/particles";
+import { Badge } from "./ui/badge";
 
 interface WorkExperienceCardProps {
   position: string;
@@ -52,9 +53,12 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
         {/* Technologies Used */}
         <div>
           <h3 className="font-sm text-sm mb-2">Technologies Used:</h3>
-          <p className="text-slate-300 font-mono text-xl">
-          {technologies.join(", ")}
-          </p>
+
+          <div className="flex flex-wrap gap-1">
+          {technologies.map((tech) => (
+              <Badge key={tech}>{tech}</Badge>
+          ))}
+          </div>
         </div>
       </div>
     </div>

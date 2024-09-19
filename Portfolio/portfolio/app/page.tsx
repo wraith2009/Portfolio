@@ -4,7 +4,7 @@ import TechStackSection from "@/components/TechStack";
 import MyProjects from "@/components/Projects";
 import MyWorkExperience from "@/components/WorkExperience";
 import AboutMe from "@/components/Aboutme";
-import ReachOut from "@/components/ReachOut";
+// import ReachOut from "@/components/ReachOut";
 
 export default function Home() {
   return (
@@ -12,9 +12,9 @@ export default function Home() {
       <TypingAnimation 
         text="Hi, I am Rahul Bhardwaj, a Full Stack developer from India." 
         duration={100} 
-        className="text-slate-300 font-montserrat text-2xl mt-4"
+        className="font-montserrat text-2xl mt-4 text-blue-500"
       ></TypingAnimation>
-      <div className="text-4xl my-2 text-center font-bold">
+      <div className="text-xl my-2 text-center font-bold">
           <p className="text-slate-300 font-montserrat text-xl"> I specialize in turning ideas into fully functional web applications</p> 
           <p className="text-slate-300 font-montserrat text-xl">Whether you are building a product from the ground up or improving an existing one,</p>
           <span className="text-xl text-blue-500">I can help bring your vision to life with clean, efficient code.</span>
@@ -49,9 +49,9 @@ export default function Home() {
       <AboutMe />
       </section>
       
-      <section id="contact">
+      {/* <section id="contact">
       <ReachOut/>
-      </section>
+      </section> */}
       
     </div>
   );
