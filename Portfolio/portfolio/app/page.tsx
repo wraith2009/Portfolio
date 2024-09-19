@@ -5,7 +5,11 @@ import MyProjects from "@/components/Projects";
 import MyWorkExperience from "@/components/WorkExperience";
 import AboutMe from "@/components/Aboutme";
 // import ReachOut from "@/components/ReachOut";
-
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Rahul Bhardwaj',
+};
 export default function Home() {
   return (
     <div className="py-20 ">
