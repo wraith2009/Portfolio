@@ -8,7 +8,7 @@ import AboutMe from "@/components/Aboutme";
 
 export default function Home() {
   return (
-    <div className="mt-20 ">
+    <div className="py-20 ">
       <TypingAnimation 
         text="Hi, I am Rahul Bhardwaj, a Full Stack developer from India." 
         duration={100} 
