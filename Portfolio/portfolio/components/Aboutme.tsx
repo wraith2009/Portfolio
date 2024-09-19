@@ -1,27 +1,62 @@
-"use client";
+'use client';
 
-import SocialDock from "./connect";
-import Image from "next/image";
-export default function AboutMe(){
-    return (
-        <div className="flex flex-col items-center justify-center py-4 mt-4 space-y-8 font-bold text-4xl  ">
-            <h2 className="text-4xl font-mono text-center text-slate-300 dark:text-gray-100 tracking-tight   ">
-                About Me
-            </h2>
-            <Image src="/pfp.jpg"  
-            className="h-[100px] w-[100px] rounded-full"
-            alt="pfp"
-            />
-            
-            <div className="-mt-4 ">
-            <p className="text-center font-montserrat text-lg text-slate-300 dark:text-gray-100 md:px-20 px-4">
-                Hi, I am <span className="text-blue-500">Rahul Bhardwaj</span>, a <span className="text-blue-500">software Developer</span> with a passion for development. I specialize in <span className="text-blue-500">MERN stack</span> and have worked with both clients and for companies. With <span className="text-blue-500">almost 1 years of experience</span>, I’m always looking to create new Technologies.
-                Let us connect and create something amazing together.
-            </p>
+import { BentoGrid, BentoCard } from "./magicui/bento-grid";
+import { FaEnvelope, FaLink, FaUserTie, FaLaptopCode } from "react-icons/fa";
 
-            <p className="text-center font-mono text-lg text-slate-300">Connect with me here : </p>
-            <SocialDock />
-            </div>
-        </div>
-    )
-}
+const About = () => {
+  return (
+    <section className="my-12 items-center">
+      <h2 className="text-center text-4xl font-bold text-slate-300 dark:text-neutral-300 mb-8">
+        About Me
+      </h2>
+
+      <BentoGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[15rem] gap-4 w-full px-4 lg:w-2/3 lg:ml-64">
+        {/* Introduction Card */}
+        <BentoCard
+          name="Hi, I am Rahul Bhardwaj"
+          className="col-span-1 lg:col-span-2 bg-gradient-to-r from-blue-500 to-green-400 text-slate-300 border-black shadow-lg"
+          background={<div className="h-full bg-gradient-to-r from-blue-500 to-green-400" />}
+          Icon={FaUserTie}
+          description="A Software Developer with almost 1 year of experience. I specialize in MERN stack development and am passionate about creating innovative technologies."
+          href="https://www.linkedin.com/in/rahulbhardwaj95990/"
+          cta="Read more"
+        />
+
+        {/* Specialization and Experience Card */}
+        <BentoCard
+          name="MERN Stack Specialist"
+          className="col-span-1 bg-gradient-to-r from-purple-500 to-red-400 text-slate-300 border-black shadow-lg"
+          background={<div className="h-full bg-gradient-to-r from-purple-500 to-red-400" />}
+          Icon={FaLaptopCode}
+          description="With experience working with clients and companies, I focus on building full-stack applications that deliver seamless user experiences."
+          href="https://insocial.tech"
+          cta="See My Work"
+        />
+
+        {/* Contact Card */}
+        <BentoCard
+          name="Let us Connect"
+          className="col-span-1 bg-gradient-to-r from-purple-600 to-gray-100 text-slate-300 border-black shadow-lg"
+          background={<div className="h-full bg-gradient-to-r from-indigo-500 to-teal-400" />}
+          Icon={FaLink}
+          description="I am always looking to collaborate on new and exciting projects. Whether it is for technical expertise or creative solutions, I am ready to contribute."
+          href="https://x.com/WGaming28441"
+          cta="Contact Me"
+        />
+
+        {/* Email Card */}
+        <BentoCard
+          name="Reach Me via Email"
+          className="col-span-1 lg:col-span-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-slate-300 border-black shadow-lg"
+          background={<div className="h-full bg-gradient-to-r from-orange-500 to-pink-400" />}
+          Icon={FaEnvelope}
+          description="Feel free to reach out via email if you want to hire me or collaborate on a project. Let us create something amazing together!"
+          href="mailto:rbh97995@gmail.com"
+          cta="Send Mail"
+        />
+      </BentoGrid>
+    </section>
+  );
+};
+
+export default About;

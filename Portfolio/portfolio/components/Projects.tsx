@@ -31,53 +31,50 @@ export default function MyProjects() {
   ];
 
   return (
-    <div className="mt-8 text-4xl font-bold">
-        <div className=" text-center mb-8">
-            <p className="font-mono text-slate-300">A Small collection of my <span className="font-mono text-blue-500">Personal Projects</span></p>
-        </div> 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:ml-10 md:py-4 p-4 ">
-      {projectDetails.map((project, index) => (
-        <CardSpotlight key={index} radius={300} color="#1e1e1e"  className={`relative w-auto h-auto md:h-[500px] md:w-[400px] rounded-lg   transition-colors duration-300 
-            `}>
-          {/* Card Content */}
-          <div className="relative z-10  flex flex-col justify-center items-center ">
-            {/* Project Image */}
-            <Image
-              src={project.imageUrl}
-              alt={project.title}
-              className="h-[200px] w-[300px] mb-4 rounded-lg "
-            />
+<div className="mt-8 text-4xl font-bold">
+  <div className="text-center mb-8">
+    <p className="font-mono text-slate-300">
+      A Small collection of my <span className="font-mono text-blue-500">Personal Projects</span>
+    </p>
+  </div>
+  
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:ml-10 md:py-4 p-4">
+    {projectDetails.map((project, index) => (
+      <div key={index} className="flex flex-col justify-center items-center md:w-[320px] w-fit border-2 rounded-2xl border-gray-600">
+        {/* Project Image */}
+        <img
+          src={project.imageUrl}
+          alt={project.title}
+          className="h-[200px]  w-full mb-4 rounded-lg"
+        />
 
-            {/* Project Title */}
-            <h3 className="text-xl font-mono text-slate-300 mb-2 ">{project.title}</h3>
+        {/* Project Title */}
+        <h3 className="text-xl font-mono text-slate-300 mb-2">{project.title}</h3>
 
-            {/* Project Description */}
-            <p className="text-gray-400 text-sm mb-4 ">{project.description}</p>
+        {/* Project Description */}
+        <p className="text-gray-400 text-sm mb-4">{project.description}</p>
 
-            <div className="flex gap-10">
-            <a href={project.liveLink}>
-              <p
-                className="text-blue-900 text-lg flex gap-2 "
-              >
-                <FaLink className="mt-1"/>Live Project link
+        {/* Links */}
+        <div className="flex gap-10">
+          {project.liveLink && (
+            <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+              <p className="text-blue-900 text-lg flex gap-2">
+                <FaLink className="mt-1" /> Live Project Link
               </p>
             </a>
-
-            <a href={project.githubLink}>
-              <p
-                className="text-blue-900 text-lg flex gap-2 "
-              >
-                <FaLink className="mt-1"/>Github link
+          )}
+          {project.githubLink && (
+            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+              <p className="text-blue-900 text-lg flex gap-2">
+                <FaLink className="mt-1" /> GitHub Link
               </p>
             </a>
-            </div>
-            {/* Live Link Button */}
-            
-            
-          </div>
-        </CardSpotlight>
-      ))}
-    </div>
-    </div>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
   );
 }
