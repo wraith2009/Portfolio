@@ -44,7 +44,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
 
 export default function MyWorkExperience() {
   return (
-    <div className="font-bold text-4xl mt-10 px-4 md:px-16 lg:px-64">
+    <div className="font-bold text-4xl mt-36 px-4 md:px-16 lg:px-0">
       <div className="font-mono text-slate-300 my-8 text-center">
         <p>Work Experience</p>
       </div>

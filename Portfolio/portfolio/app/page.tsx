@@ -4,14 +4,15 @@ import MyProjects from "@/components/Projects";
 import MyWorkExperience from "@/components/WorkExperience";
 import AboutMe from "@/components/Aboutme";
 import { Metadata } from "next";
-
+import { TracingBeam } from "@/components/ui/tracing-beam";
 export const metadata: Metadata = {
   title: "Rahul Bhardwaj",
 };
 export default function Home() {
   return (
     <div className="py-20 bg-black">
-      <div className="flex flex-col gap-6 px-4 md:px-16 lg:px-72 items-start mt-20">
+      <TracingBeam>
+      <div className="flex flex-col gap-6 px-4 md:px-16 lg:px-10 items-start mt-20">
         <p className="text-blue-400 text-lg">Hi, my name is</p>
         <h1 className="text-5xl md:text-7xl font-bold text-slate-200">
           Rahul Bhardwaj.
@@ -38,7 +39,7 @@ export default function Home() {
         </a>
       </div>
 
-      <section id="experience">
+      <section id="experience ">
         <MyWorkExperience />
       </section>
 
@@ -55,6 +56,7 @@ export default function Home() {
       {/* <section id="contact">
       <ReachOut/>
       </section> */}
+      </TracingBeam>
     </div>
   );
 }

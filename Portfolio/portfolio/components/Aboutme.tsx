@@ -5,12 +5,12 @@ import { FaEnvelope, FaLink, FaUserTie, FaLaptopCode } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section className="my-12 items-center">
+    <section className="mt-12 items-center">
       <h2 className="text-center text-4xl font-bold text-slate-300 dark:text-neutral-300 mb-8">
         About Me
       </h2>
 
-      <BentoGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[15rem] gap-4 w-full px-4 lg:w-2/3 lg:ml-64">
+      <BentoGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[15rem] gap-4 w-full px-4  ">
         {/* Introduction Card */}
         <BentoCard
           name="Hi, I am Rahul Bhardwaj"

@@ -33,7 +33,7 @@ export default function MyProjects() {
   ];
 
   return (
-    <div className="mt-8 px-4 md:px-16 lg:px-32 font-bold text-4xl ">
+    <div className="mt-44 px-4 md:px-16 lg:px-0 font-bold text-4xl ">
       <div className="text-center my-8 space-y-8">
         <p className="font-mono text-slate-300">
           A small collection of my{" "}
@@ -42,7 +42,7 @@ export default function MyProjects() {
       </div>
 
       {/* Project Cards */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-1 lg:px-28">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-1 lg:px-0">
         {projectDetails.map((project, index) => (
           <div
             key={index}
