@@ -5,7 +5,7 @@ import { FaEnvelope, FaLink, FaUserTie, FaLaptopCode } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section className="mt-12 items-center">
+    <section className="mt-14 items-center md:px-20 pb-10">
       <h2 className="text-center text-4xl font-bold text-slate-300 dark:text-neutral-300 mb-8">
         About Me
       </h2>
