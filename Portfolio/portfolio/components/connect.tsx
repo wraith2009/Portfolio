@@ -45,7 +45,7 @@ export default function SocialDock() {
         {/* X (formerly Twitter) Icon */}
         <DockIcon>
           <a
-            href="https://x.com/WGaming28441"
+            href="https://x.com/10xRahul_"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,7 +58,7 @@ export default function SocialDock() {
         {/* LinkedIn Icon */}
         <DockIcon>
           <a
-            href="https://www.linkedin.com/in/rahulbhardwaj95990/"
+            href="https://www.linkedin.com/in/rahulbhardwaj09/"
             target="_blank"
             rel="noopener noreferrer"
           >

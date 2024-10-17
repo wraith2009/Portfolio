@@ -19,7 +19,7 @@ export default function Home() {
     <div className="py-20 bg-black px-4 md:px-40 flex justify-center flex-col items-center">
       {/* Introduce yourself section */}
       <motion.div
-        className="flex flex-col gap-6 px-4 md:px-16  items-start  md:my-28 w-full"
+        className="flex flex-col gap-6 px-4 md:px-16  items-start  md:my-24 w-full"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
@@ -49,7 +49,7 @@ export default function Home() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <a
-          href="/Rahul_Resume.pdf"
+          href="https://drive.google.com/file/d/1-5GRS3x2LPJ9Sp2ibTV4KL7XafJ9XDno/view?usp=sharing" target="_blank"
           download="Rahul_Bhardwaj_Resume.pdf"
         >
           <ShimmerButton background="#020617" className="w-48 h-12 mb-2">
