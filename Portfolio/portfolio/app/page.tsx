@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="py-20 bg-black">
-      <TracingBeam>
+      {/* <TracingBeam> */}
       <div className="flex flex-col gap-6 px-4 md:px-16 lg:px-10 items-start mt-20">
         <p className="text-blue-400 text-lg">Hi, my name is</p>
         <h1 className="text-5xl md:text-7xl font-bold text-slate-200">
@@ -56,7 +56,7 @@ export default function Home() {
       {/* <section id="contact">
       <ReachOut/>
       </section> */}
-      </TracingBeam>
+      {/* </TracingBeam> */}
     </div>
   );
 }
