@@ -61,8 +61,8 @@ export default function MyWorkExperience() {
         <WorkExperience
           companyName="HillOne Technologies"
           position="Full Stack Developer"
-          timePeriod="April - August 2023"
-          description="I developed a feature to generate negative test cases for real-world APIs using OpenAI on the backend, and also implemented UI corrections to enhance the user experience."
+          timePeriod="April - October 2024"
+          description="I developed a feature to generate negative test cases for real-world APIs using OpenAI on the backend, and also implemented UI corrections to enhance the user experience. I worked on 2 Projects during the Internship developing a API testing platform."
           technologies={["React", "Redux", "MERN", "AWS"]}
         />
       </div>
