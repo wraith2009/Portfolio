@@ -17,7 +17,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
   technologies,
 }) => {
   return (
-    <div className="p-4 rounded-lg border-b-2 border-slate-400">
+    <div className="p-2 rounded-lg border-b-2 border-slate-400">
       <div className="flex justify-between items-center">
         <div>
           <p className="text-lg md:text-xl">{companyName}</p>
@@ -32,7 +32,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
         <p className="text-xs md:text-sm text-slate-300 mb-2">
           Technologies used:
         </p>
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1 mb-2">
           {technologies.map((tech) => (
             <Badge key={tech}>{tech}</Badge>
           ))}
@@ -49,7 +49,6 @@ export default function MyWorkExperience() {
         <p>Work Experience</p>
       </div>
       <div className="flex flex-col gap-8 mt-10 text-slate-200">
-        {/* Freelance Work Experience */}
         <WorkExperience
           companyName="Freelance"
           position="Full Stack Developer"

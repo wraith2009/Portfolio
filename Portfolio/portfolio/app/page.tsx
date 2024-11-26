@@ -7,8 +7,6 @@ import MyProjects from "@/components/Projects";
 import MyWorkExperience from "@/components/WorkExperience";
 import AboutMe from "@/components/Aboutme";
 
-
-// Define the animation variant (fade-in and upward motion)
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -17,7 +15,6 @@ const fadeInUp = {
 export default function Home() {
   return (
     <div className="py-20 bg-black px-4 md:px-40 flex justify-center flex-col items-center">
-      {/* Introduce yourself section */}
       <motion.div
         className="flex flex-col gap-6 px-4 md:px-16  items-start  md:my-24 w-full"
         initial="hidden"
@@ -38,25 +35,26 @@ export default function Home() {
           product from the ground up or improving an existing one, I can help
           bring your vision to life with clean, efficient code.
         </p>
+        <motion.div
+          className="flex self-start items-center mt-4"
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInUp}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <a
+            href="https://drive.google.com/file/d/1-5GRS3x2LPJ9Sp2ibTV4KL7XafJ9XDno/view?usp=sharing"
+            target="_blank"
+            download="Rahul_Bhardwaj_Resume.pdf"
+          >
+            <ShimmerButton background="#020617" className="w-48 h-12 mb-2">
+              Resume
+            </ShimmerButton>
+          </a>
+        </motion.div>
       </motion.div>
 
       {/* Resume download button */}
-      <motion.div
-        className="flex justify-center items-center mt-8"
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeInUp}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <a
-          href="https://drive.google.com/file/d/1-5GRS3x2LPJ9Sp2ibTV4KL7XafJ9XDno/view?usp=sharing" target="_blank"
-          download="Rahul_Bhardwaj_Resume.pdf"
-        >
-          <ShimmerButton background="#020617" className="w-48 h-12 mb-2">
-            Resume
-          </ShimmerButton>
-        </a>
-      </motion.div>
 
       {/* Work experience section */}
       <motion.section
