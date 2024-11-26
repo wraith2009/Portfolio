@@ -32,7 +32,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
         <p className="text-xs md:text-sm text-slate-300 mb-2">
           Technologies used:
         </p>
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1 mb-2">
           {technologies.map((tech) => (
             <Badge key={tech}>{tech}</Badge>
           ))}
