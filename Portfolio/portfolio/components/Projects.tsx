@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
       imageSrc: "/1--xbrainly.jpg",
       projectName: "100xBrainly",
       description:
-        "100xBrainly allows user to store links from multiple applications also ",
+        "100xBrainly is an innovative application designed to simplify the process of organizing and managing links from multiple sources. Whether you are gathering resources, saving articles, or bookmarking essential tools, 100xBrainly ensures all your links are stored in one convenient place. The app uses Recoil for efficient local storage, providing a smooth and responsive user experience. Additionally, it features a powerful search functionality, allowing users to quickly locate stored links without hassle. ",
       technologies: [
         "React.js",
         "TypeScript",
