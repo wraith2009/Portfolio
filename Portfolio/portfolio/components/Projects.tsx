@@ -50,6 +50,36 @@ const Projects: React.FC = () => {
       github: "https://github.com/wraith2009/brainlyFrontend",
       live: "https://brainly-frontend-sable.vercel.app/",
     },
+    {
+      imageSrc: "/chillguyanalyzer.png",
+      projectName: "ChillGuyAnalyzer",
+      description:
+        " ChillGuyAnalyzer is a creative project that evaluates the chillness of users based on data extracted from their GitHub profiles. Built with Hono for the backend and React.js for the frontend, the application analyzes user activity, repositories, and contributions to determine a unique chillness score, offering an engaging and fun way to interpret GitHub data",
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Honojs",
+        "OpenAI",
+      ],
+      github: "https://github.com/wraith2009/ChillGuyAnalyzer",
+      live: "https://chillguyanalyzer.onrender.com/",
+    },
+    {
+      imageSrc: "/campussync.jpg",
+      projectName: "CampusSync",
+      description:
+        " This project is currently in development . Building an ERP for University Management using nextjs and postgresql",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "OpenAI",
+        "websocket",
+      ],
+      github: "https://github.com/wraith2009/EMS",
+      live: "https://campussync.tech/",
+    },
   ];
 
   return (

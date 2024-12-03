@@ -1,4 +1,3 @@
-// SocialDock.tsx
 "use client";
 
 import {
@@ -19,20 +18,17 @@ export default function SocialDock() {
         direction="middle"
         className="bg-black border-gray-400"
       >
-        {/* Home Icon */}
         <DockIcon>
           <a href="#about" className="text-slate-300">
             <FaHome className="text-2xl" />
           </a>
         </DockIcon>
 
-        {/* Separator */}
         <span className="text-gray-400 mx-1 text-sm">|</span>
 
-        {/* Email Icon */}
         <DockIcon>
           <a
-            href="mailto:rbh97995.com"
+            href="mailto:rbh97995@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -40,9 +36,6 @@ export default function SocialDock() {
           </a>
         </DockIcon>
 
-        {/* Separator */}
-
-        {/* X (formerly Twitter) Icon */}
         <DockIcon>
           <a
             href="https://x.com/10xRahul_"
@@ -53,9 +46,6 @@ export default function SocialDock() {
           </a>
         </DockIcon>
 
-        {/* Separator */}
-
-        {/* LinkedIn Icon */}
         <DockIcon>
           <a
             href="https://www.linkedin.com/in/rahulbhardwaj09/"
@@ -66,7 +56,6 @@ export default function SocialDock() {
           </a>
         </DockIcon>
 
-        {/* GitHub Icon */}
         <DockIcon>
           <a
             href="https://github.com/wraith2009"
