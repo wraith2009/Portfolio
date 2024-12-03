@@ -66,9 +66,10 @@ const Projects: React.FC = () => {
       live: "https://chillguyanalyzer.onrender.com/",
     },
     {
-      imageSrc: "/chillguyanalyzer.png",
-      projectName: "ChillGuyAnalyzer",
-      description: " This project is currently in development ",
+      imageSrc: "/campussync.jpg",
+      projectName: "CampusSync",
+      description:
+        " This project is currently in development . Building an ERP for University Management using nextjs and postgresql",
       technologies: [
         "Next.js",
         "TypeScript",
