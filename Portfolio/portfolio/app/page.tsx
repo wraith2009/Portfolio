@@ -20,7 +20,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
-        viewport={{ once: true, amount: 0.3 }} // Ensures the animation triggers when 30% of the section is in view
+        viewport={{ once: true, amount: 0.3 }}
       >
         <p className="text-blue-400 text-lg">Hi, my name is</p>
         <h1 className="text-5xl md:text-7xl font-bold text-slate-200">
@@ -43,7 +43,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <a
-            href="https://drive.google.com/file/d/1-5GRS3x2LPJ9Sp2ibTV4KL7XafJ9XDno/view?usp=sharing"
+            href="https://drive.google.com/file/d/1w12SMw3JBBmgFy5iv4pZ28aBFpPzE0m2/view?usp=drive_link"
             target="_blank"
             download="Rahul_Bhardwaj_Resume.pdf"
           >
@@ -54,9 +54,6 @@ export default function Home() {
         </motion.div>
       </motion.div>
 
-      {/* Resume download button */}
-
-      {/* Work experience section */}
       <motion.section
         id="experience"
         initial="hidden"
@@ -67,7 +64,6 @@ export default function Home() {
         <MyWorkExperience />
       </motion.section>
 
-      {/* Projects section */}
       <motion.section
         id="projects"
         initial="hidden"
@@ -78,7 +74,6 @@ export default function Home() {
         <MyProjects />
       </motion.section>
 
-      {/* Tech stack section */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -88,7 +83,6 @@ export default function Home() {
         <TechStackSection />
       </motion.div>
 
-      {/* About me section */}
       <motion.section
         id="about"
         initial="hidden"

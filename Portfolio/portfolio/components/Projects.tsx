@@ -65,6 +65,20 @@ const Projects: React.FC = () => {
       github: "https://github.com/wraith2009/ChillGuyAnalyzer",
       live: "https://chillguyanalyzer.onrender.com/",
     },
+    {
+      imageSrc: "/chillguyanalyzer.png",
+      projectName: "ChillGuyAnalyzer",
+      description: " This project is currently in development ",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "OpenAI",
+        "websocket",
+      ],
+      github: "https://github.com/wraith2009/EMS",
+      live: "https://campussync.tech/",
+    },
   ];
 
   return (
