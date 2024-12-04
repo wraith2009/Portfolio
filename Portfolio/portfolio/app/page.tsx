@@ -14,7 +14,7 @@ const fadeInUp = {
 
 export default function Home() {
   return (
-    <div className="py-20 bg-black px-4 md:px-40 flex justify-center flex-col items-center">
+    <div className="py-20 bg-black px-4 md:px-40 flex  flex-col ">
       <motion.div
         className="flex flex-col gap-6 px-4 md:px-16  items-start  md:my-24 w-full"
         initial="hidden"
