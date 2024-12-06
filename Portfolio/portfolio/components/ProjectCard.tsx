@@ -23,21 +23,11 @@ const FeaturedProjectComponent: React.FC<FeaturedProjectComponentProps> = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-black-600 text-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-600">
-      {imageSrc && (
-        <div className="h-48 relative">
-          <Image
-            src={imageSrc}
-            alt={projectName}
-            fill
-            style={{ objectFit: "cover" }}
-            className="rounded-t-lg"
-            priority
-          />
-        </div>
-      )}
+    <div className="bg-black-600 text-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
       <div className="p-6">
-        <h3 className="text-2xl font-bold mb-2">{projectName}</h3>
+        <h3 className="text-2xl font-semibold text-blue-500 mb-2">
+          {projectName}
+        </h3>
         <p
           className={`text-gray-400 mb-4 transition-all ${
             isExpanded ? "max-h-full" : "line-clamp-3"
@@ -45,14 +35,7 @@ const FeaturedProjectComponent: React.FC<FeaturedProjectComponentProps> = ({
         >
           {description}
         </p>
-        {description.length > 100 && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-blue-400 hover:underline mb-4"
-          >
-            {isExpanded ? "See Less" : "See More ..."}
-          </button>
-        )}
+
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech, index) => (
             <Badge key={tech}>{tech}</Badge>
