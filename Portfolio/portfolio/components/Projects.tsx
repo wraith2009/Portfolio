@@ -10,9 +10,38 @@ const Projects: React.FC = () => {
 
   const projectData = [
     {
-      imageSrc: "/insocialImage.jpg",
+      projectName: "100xBrainly",
+      description:
+        "A personal Secound Brain with AI feature to communicate with your secound brain.",
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "ExpressJs",
+        "Node.js",
+        "Recoil",
+      ],
+      github: "https://github.com/wraith2009/brainlyFrontend",
+      live: "https://brainly-frontend-sable.vercel.app/",
+    },
+
+    {
+      projectName: "ChillGuyAnalyzer",
+      description:
+        "Measure the chillness of a person using AI based on their Github profile.",
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Honojs",
+        "OpenAI",
+      ],
+      github: "https://github.com/wraith2009/ChillGuyAnalyzer",
+      live: "https://chillguyanalyzer.onrender.com/",
+    },
+    {
       projectName: "inSocial",
-      description: `inSocial: Anonymous messaging app with React frontend and Node.js backend. Features secure posts, real-time chat via WebSockets, and live notifications. Privacy-focused design for engaging, worry-free social interaction.`,
+      description: "A social media platform with real time messaging.",
       technologies: [
         "Node.js",
         "Express",
@@ -25,51 +54,10 @@ const Projects: React.FC = () => {
       github: "https://github.com/mayank2153/inSocial",
       live: "https://insocial.tech",
     },
+
     {
-      imageSrc: "/deliverimage.jpg",
-      projectName: "Deliver",
-      description:
-        "Deliver is a food ordering platform designed to provide users with real-time restaurant listings and a seamless food ordering experience. Users can browse restaurants powered by the Swiggy API and easily add, remove, or modify items in their shopping cart. The app enables efficient navigation between pages using React Router DOM, ensuring a smooth and intuitive user journey.",
-      technologies: ["React.js", "Redux", "React Router DOM", "TailwindCSS"],
-      github: "https://github.com/wraith2009/deliver",
-      live: "https://deliver--09.web.app/",
-    },
-    {
-      imageSrc: "/1--xbrainly.jpg",
-      projectName: "100xBrainly",
-      description:
-        "100xBrainly is an innovative application designed to simplify the process of organizing and managing links from multiple sources. Whether you are gathering resources, saving articles, or bookmarking essential tools, 100xBrainly ensures all your links are stored in one convenient place. The app uses Recoil for efficient local storage, providing a smooth and responsive user experience. Additionally, it features a powerful search functionality, allowing users to quickly locate stored links without hassle. ",
-      technologies: [
-        "React.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "ExpressJs",
-        "Node.js",
-        "Recoil",
-      ],
-      github: "https://github.com/wraith2009/brainlyFrontend",
-      live: "https://brainly-frontend-sable.vercel.app/",
-    },
-    {
-      imageSrc: "/chillguyanalyzer.png",
-      projectName: "ChillGuyAnalyzer",
-      description:
-        " ChillGuyAnalyzer is a creative project that evaluates the chillness of users based on data extracted from their GitHub profiles. Built with Hono for the backend and React.js for the frontend, the application analyzes user activity, repositories, and contributions to determine a unique chillness score, offering an engaging and fun way to interpret GitHub data",
-      technologies: [
-        "React.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Honojs",
-        "OpenAI",
-      ],
-      github: "https://github.com/wraith2009/ChillGuyAnalyzer",
-      live: "https://chillguyanalyzer.onrender.com/",
-    },
-    {
-      imageSrc: "/campussync.jpg",
       projectName: "CampusSync",
-      description:
-        " This project is currently in development . Building an ERP for University Management using nextjs and postgresql",
+      description: "ERM for Universities with added payment support.",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -79,6 +67,13 @@ const Projects: React.FC = () => {
       ],
       github: "https://github.com/wraith2009/EMS",
       live: "https://campussync.tech/",
+    },
+    {
+      projectName: "Deliver",
+      description: "Food Ordering Platform using Swiggy's api.",
+      technologies: ["React.js", "Redux", "React Router DOM", "TailwindCSS"],
+      github: "https://github.com/wraith2009/deliver",
+      live: "https://deliver--09.web.app/",
     },
   ];
 
@@ -97,7 +92,6 @@ const Projects: React.FC = () => {
         {projectData.map((project, index) => (
           <ProjectComponent
             key={index}
-            imageSrc={project.imageSrc}
             projectName={project.projectName}
             description={project.description}
             technologies={project.technologies}
