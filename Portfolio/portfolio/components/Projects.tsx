@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
         "websocket",
       ],
       github: "https://github.com/wraith2009/EMS",
-      live: "https://campussync.tech/",
+      live: "#",
     },
     {
       projectName: "Deliver",
@@ -81,12 +81,12 @@ const Projects: React.FC = () => {
     <section
       ref={projectsRef}
       id="projects"
-      className={`text-black p-2 bg-black mt-8 mb-16 transition-opacity duration-1000 ${
+      className={`text-black p-2 bg-black mt-8 mb-16 transition-opacity duration-1000 px-4 md:px-16 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <h2 className="text-center text-4xl font-bold text-slate-300 dark:text-neutral-300 my-8">
-        A Small Collection of my Projects
+      <h2 className=" text-4xl font-bold text-white dark:text-neutral-300 my-8">
+        Projects
       </h2>
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projectData.map((project, index) => (

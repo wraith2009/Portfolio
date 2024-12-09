@@ -73,7 +73,7 @@ export default function Home() {
       >
         <MyProjects />
       </motion.section>
-
+      {/* 
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -91,7 +91,18 @@ export default function Home() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <AboutMe />
-      </motion.section>
+      </motion.section> */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className=" border-t border-gray-600 flex flex-col justify-center items-center text-slate-400 py-4">
+          <span>© 2024 Rahul Bhardwaj. All rights reserved.</span>
+          <span className="my-2">Made with ❤️ by Rahul Bhardwaj</span>
+        </div>
+      </motion.div>
     </div>
   );
 }

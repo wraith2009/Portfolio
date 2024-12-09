@@ -19,7 +19,7 @@ export default function SocialDock() {
         className="bg-black border-gray-400"
       >
         <DockIcon>
-          <a href="#about" className="text-slate-300">
+          <a href="/" className="text-slate-300">
             <FaHome className="text-2xl" />
           </a>
         </DockIcon>
