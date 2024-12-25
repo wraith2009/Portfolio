@@ -13,7 +13,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
 }) => {
   return (
     <div className="p-4 rounded-lg flex  gap-4">
-      <HiMiniBuildingOffice2 className="mt-[2px] w-6 h-6 text-slate-200 -ml-4" />
+      <HiMiniBuildingOffice2 className="mt-6 w-6 h-6 text-slate-200 -ml-4" />
       <div className="flex flex-col">
         <p className="text-lg md:text-xl font-semibold text-slate-200">
           {companyName}
@@ -27,7 +27,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
 
 export default function MyWorkExperience() {
   return (
-    <div className="font-bold text-4xl mt-8 px-4 md:px-16">
+    <div className="font-bold text-4xl mt-4 px-4 md:px-16">
       <div className="font-mono text-white my-8 ">
         <p>Work Experience</p>
 
@@ -38,8 +38,14 @@ export default function MyWorkExperience() {
       <div className="flex flex-col gap-4 mt-8 text-slate-200  ">
         <WorkExperience
           companyName="HillOne Technologies"
-          position="Full Stack Developer"
+          position="Full Stack Developer Intern"
           timePeriod="June 2024 - present"
+        />
+
+        <WorkExperience
+          companyName="Experiment Labs"
+          position="Full Stack Developer Intern"
+          timePeriod="Dec-2024 - present"
         />
 
         <WorkExperience
