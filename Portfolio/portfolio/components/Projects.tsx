@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
         "Google Gemini",
       ],
       github: "https://github.com/mayank2153/inSocial",
-      live: "https://insocial.tech",
+      live: "#",
     },
 
     {
@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
       description: "Food Ordering Platform using Swiggy's api.",
       technologies: ["React.js", "Redux", "React Router DOM", "TailwindCSS"],
       github: "https://github.com/wraith2009/deliver",
-      live: "https://deliver--09.web.app/",
+      live: "#",
     },
   ];
 
