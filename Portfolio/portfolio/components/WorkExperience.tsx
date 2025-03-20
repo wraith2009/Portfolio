@@ -39,7 +39,7 @@ export default function MyWorkExperience() {
         <WorkExperience
           companyName="HillOne Technologies"
           position="Full Stack Developer Intern"
-          timePeriod="June 2024 - present"
+          timePeriod="June 2024 - Dec-2024"
         />
 
         <WorkExperience
