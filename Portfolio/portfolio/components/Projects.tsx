@@ -26,20 +26,6 @@ const Projects: React.FC = () => {
     },
 
     {
-      projectName: "ChillGuyAnalyzer",
-      description:
-        "Measure the chillness of a person using AI based on their Github profile.",
-      technologies: [
-        "React.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Honojs",
-        "OpenAI",
-      ],
-      github: "https://github.com/wraith2009/ChillGuyAnalyzer",
-      live: "https://chillguyanalyzer.onrender.com/",
-    },
-    {
       projectName: "inSocial",
       description: "A social media platform with real time messaging.",
       technologies: [
@@ -68,12 +54,20 @@ const Projects: React.FC = () => {
       github: "https://github.com/wraith2009/EMS",
       live: "#",
     },
+
     {
-      projectName: "Deliver",
-      description: "Food Ordering Platform using Swiggy's api.",
-      technologies: ["React.js", "Redux", "React Router DOM", "TailwindCSS"],
-      github: "https://github.com/wraith2009/deliver",
-      live: "#",
+      projectName: "ChillGuyAnalyzer",
+      description:
+        "A fun project that i worked on . It measure the chillness of a person using AI based on their Github profile.",
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Honojs",
+        "OpenAI",
+      ],
+      github: "https://github.com/wraith2009/ChillGuyAnalyzer",
+      live: "https://chillguyanalyzer.onrender.com/",
     },
   ];
 

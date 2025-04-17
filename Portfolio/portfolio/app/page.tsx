@@ -6,6 +6,7 @@ import TechStackSection from "@/components/TechStack";
 import MyProjects from "@/components/Projects";
 import MyWorkExperience from "@/components/WorkExperience";
 import AboutMe from "@/components/Aboutme";
+import Blogs_section from "@/components/blogs";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -43,7 +44,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <a
-            href="https://drive.google.com/file/d/1w12SMw3JBBmgFy5iv4pZ28aBFpPzE0m2/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1niXm0ezD5HsLaJKWHchwhU3mmp5kIWr9/view?usp=sharing"
             target="_blank"
             download="Rahul_Bhardwaj_Resume.pdf"
           >
@@ -62,6 +63,16 @@ export default function Home() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <MyWorkExperience />
+      </motion.section>
+
+      <motion.section
+        id="experience"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <Blogs_section />
       </motion.section>
 
       <motion.section
