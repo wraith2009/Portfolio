@@ -33,7 +33,7 @@ export default function MyWorkExperience() {
       <div className="flex flex-col gap-4 mt-8 text-slate-200  ">
         <WorkExperience
           companyName="Experiment Labs"
-          position="Full Stack Developer Intern"
+          position="Software Engineer"
           timePeriod="Dec-2024 - present"
         />
 

@@ -5,6 +5,11 @@ export default function Blogs_section() {
       title: "How vector search works",
       link: "https://medium.com/@rbh97995/how-vector-search-works-1f965e167a63",
     },
+    {
+      date: "May 08, 2025",
+      title: "Understanding Phantom Reads: Ghosts in Your Database",
+      link: "https://medium.com/@rbh97995/understanding-phantom-reads-ghosts-in-your-database-2e2964caf96b",
+    },
   ];
   return (
     <div className=" mt-4 px-4 md:px-16">
