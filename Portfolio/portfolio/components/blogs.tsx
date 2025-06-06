@@ -16,6 +16,12 @@ export default function Blogs_section() {
         "Eventual Consistency in Distributed Systems: A Real-World Perspective",
       link: "https://medium.com/@rbh97995/eventual-consistency-in-distributed-systems-a-real-world-perspective-1175fd0f742b",
     },
+    {
+      date: "June 2, 2025",
+      title:
+        "From Monolith to Microservice: Designing a Centralized Payment System for a Growing EdTech Platform",
+      link: "https://medium.com/@rbh97995/from-monolith-to-microservice-designing-a-centralized-payment-system-for-a-growing-edtech-platform-23539a4d89ff",
+    },
   ];
 
   return (
