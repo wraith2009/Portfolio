@@ -62,21 +62,6 @@ const Projects: React.FC = () => {
       github: "https://github.com/mayank2153/inSocial",
       live: "#",
     },
-
-    {
-      projectName: "CampusSync",
-      description: "ERM for Universities with added payment support.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "OpenAI",
-        "websocket",
-      ],
-      github: "https://github.com/wraith2009/EMS",
-      live: "#",
-    },
-
     {
       projectName: "ChillGuyAnalyzer",
       description:
