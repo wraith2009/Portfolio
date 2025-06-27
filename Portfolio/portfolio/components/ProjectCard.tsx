@@ -23,7 +23,7 @@ const FeaturedProjectComponent: React.FC<FeaturedProjectComponentProps> = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-black-600 text-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
+    <div className="bg-transparent text-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
       <div className="p-6">
         <h3 className="text-2xl font-semibold text-blue-500 mb-2">
           {projectName}

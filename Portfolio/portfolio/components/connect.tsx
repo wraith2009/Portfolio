@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  FaEnvelope,
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaHome,
-} from "react-icons/fa";
+import { FaEnvelope, FaTwitter, FaGithub, FaHome } from "react-icons/fa";
 import { Dock, DockIcon } from "./magicui/dock";
 
 export default function SocialDock() {
@@ -46,7 +40,7 @@ export default function SocialDock() {
           </a>
         </DockIcon>
 
-        <DockIcon>
+        {/* <DockIcon>
           <a
             href="https://www.linkedin.com/in/rahulbhardwaj09/"
             target="_blank"
@@ -54,7 +48,7 @@ export default function SocialDock() {
           >
             <FaLinkedin className="text-2xl text-slate-300" />
           </a>
-        </DockIcon>
+        </DockIcon> */}
 
         <DockIcon>
           <a

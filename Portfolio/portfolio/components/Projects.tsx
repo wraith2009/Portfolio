@@ -10,6 +10,28 @@ const Projects: React.FC = () => {
 
   const projectData = [
     {
+      projectName: "w-Monitor",
+      description:
+        "A modern website and API monitoring platform with alerting, incident management, and performance analytics. Currently in the building phase, focusing on scalable architecture and seamless DX.",
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "SQS",
+        "AWS Lambda",
+      ],
+      github: "https://github.com/wraith2009/w-monitor-backend",
+      live: "#", // In building phase
+    },
+    {
+      projectName: "ts-orm",
+      description:
+        "A TypeScript-first ORM designed for performance, developer experience, and clear data modeling, inspired by Prisma and Drizzle. Supports migrations, transactions, and type-safe queries with clean API design. Currently in active development.",
+      technologies: ["TypeScript", "Node.js", "PostgreSQL", "Zod"],
+      github: "https://github.com/wraith2009/ts-orm",
+      live: "#", // In building phase
+    },
+    {
       projectName: "100xBrainly",
       description:
         "A personal Secound Brain with AI feature to communicate with your secound brain.",
