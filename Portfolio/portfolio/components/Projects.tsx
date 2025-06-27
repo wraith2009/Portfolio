@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
     {
       projectName: "w-Monitor",
       description:
-        "A modern website and API monitoring platform with alerting, incident management, and performance analytics. Currently in the building phase, focusing on scalable architecture and seamless DX.",
+        "Currently in the building phase, A modern website and API monitoring platform with alerting.",
       technologies: [
         "React.js",
         "TypeScript",
@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
     {
       projectName: "ts-orm",
       description:
-        "A TypeScript-first ORM designed for performance, developer experience, and clear data modeling, inspired by Prisma and Drizzle. Supports migrations, transactions, and type-safe queries with clean API design. Currently in active development.",
+        " Currently in active development . A TypeScript-first ORM designed for fun.",
       technologies: ["TypeScript", "Node.js", "PostgreSQL", "Zod"],
       github: "https://github.com/wraith2009/ts-orm",
       live: "#", // In building phase
