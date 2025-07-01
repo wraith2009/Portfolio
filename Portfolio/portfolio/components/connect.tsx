@@ -22,7 +22,7 @@ export default function SocialDock() {
 
         <DockIcon>
           <a
-            href="mailto:rbh97995@gmail.com"
+            href="https://cal.com/rahul-bhardwaj-tdgmpt/15min"
             target="_blank"
             rel="noopener noreferrer"
           >

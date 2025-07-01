@@ -22,6 +22,12 @@ export default function Blogs_section() {
         "From Monolith to Microservice: Designing a Centralized Payment System for a Growing EdTech Platform",
       link: "https://medium.com/@rbh97995/from-monolith-to-microservice-designing-a-centralized-payment-system-for-a-growing-edtech-platform-23539a4d89ff",
     },
+    {
+      date: "June 30, 2025",
+      title:
+        "Understanding Processes in Operating Systems: The Beating Heart of Your Computer",
+      link: "https://medium.com/@rbh97995/understanding-processes-in-operating-systems-the-beating-heart-of-your-computer-ae1734a57392",
+    },
   ];
 
   return (
