@@ -28,6 +28,11 @@ export default function Blogs_section() {
         "Understanding Processes in Operating Systems: The Beating Heart of Your Computer",
       link: "https://medium.com/@rbh97995/understanding-processes-in-operating-systems-the-beating-heart-of-your-computer-ae1734a57392",
     },
+    {
+      date: "July 07, 2025",
+      title: "How Computers Talk: A Deep Dive into Host-to-Host Communication",
+      link: "https://medium.com/@rahulbhardwaj09/how-computers-talk-a-deep-dive-into-host-to-host-communication-2210494ea0fa",
+    },
   ];
 
   return (
