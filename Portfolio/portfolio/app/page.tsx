@@ -36,7 +36,7 @@ export default function Home() {
           product from the ground up or improving an existing one, I can help
           bring your vision to life with clean, efficient code.
         </p>
-        <motion.div
+{/* <motion.div
           className="flex self-start items-center mt-4"
           initial="hidden"
           whileInView="visible"
@@ -52,7 +52,7 @@ export default function Home() {
               Resume
             </ShimmerButton>
           </a>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       <motion.section
