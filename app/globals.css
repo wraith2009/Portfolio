@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Dark mode (default) */
+  :root {
+    --bg: #0a0a0a;
+    --bg-secondary: #111111;
+    --text: #e5e5e5;
+    --text-muted: #737373;
+    --text-subtle: #525252;
+    --text-faint: #404040;
+    --border: #1a1a1a;
+    --border-hover: #262626;
+    --accent: #1DB954;
+  }
+
+  /* Light mode */
+  .light {
+    --bg: #fafafa;
+    --bg-secondary: #f5f5f5;
+    --text: #171717;
+    --text-muted: #525252;
+    --text-subtle: #737373;
+    --text-faint: #a3a3a3;
+    --border: #e5e5e5;
+    --border-hover: #d4d4d4;
+    --accent: #1DB954;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[var(--border)];
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  ::selection {
+    background: var(--text);
+    color: var(--bg);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-subtle);
+}

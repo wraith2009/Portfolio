@@ -1,0 +1,170 @@
+---
+title: "Understanding Phantom Reads: Ghosts in Your Database"
+date: "2025-05-08"
+description: "Imagine you’re an accountant at the end of a busy workday."
+tags: ["databases", "transactions", "concurrency"]
+published: true
+sourceUrl: "https://rahulbhardwaj09.medium.com/understanding-phantom-reads-ghosts-in-your-database-2e2964caf96b"
+mediumId: "2e2964caf96b"
+---
+Imagine you’re an accountant at the end of a busy workday. You sit down, count all the money the company made, and note the total. You’re just about to process the report when out of nowhere something strange happens.
+
+You check the numbers again, and suddenly… they’ve changed.
+
+Maybe someone slipped in a last-minute sale that wasn’t there before. Or maybe a refund got processed behind your back. You didn’t miss anything. You did your job right. But the totals don’t match anymore.
+
+That mysterious change? That’s what database folks call a **phantom** — something that wasn’t there before, or something that was there but suddenly disappeared.
+
+Welcome to the world of **phantom reads**.
+
+***That extra money you suddenly see — or don’t see anymore — is like a phantom, it wasn’t part of your original calculation. Whether it appeared out of nowhere or vanished unexpectedly, this is exactly what a phantom read looks like in databases.***
+
+### What Is a Phantom Read?
+
+In database transactions, a *phantom read* occurs when you run the same query twice within a single transaction and get different results — not because existing rows changed, but because new rows appeared or old ones disappeared.
+
+> Phantom reads are about new data entering (or leaving) the result set of a stable query — mid-transaction.
+
+Let’s say you query all users who registered today and get five results. Before your transaction ends, another user signs up. You re-run the same query and now get six results. That sixth row? That’s your phantom.
+
+**How it differs from other anomalies:**
+
+- **Dirty Reads**: Read uncommitted data from another transaction.
+- **Non-Repeatable Reads**: Same row returns different data between reads.
+- **Phantom Reads**: Different *rows* appear (or vanish) — the query result set changes.
+
+### A Real-World Example: Rahul’s Bookstore
+
+Suppose Rahul runs a small online bookstore. His books table looks like this:
+
+```
+| id | title               | author |
+|----|---------------------|--------|
+| 1  | The Cosmic Path     | Rahul  |
+| 2  | Time and Beyond     | Rahul  |
+| 3  | Quantum Realms      | Rahul  |
+| 4  | The Hidden Life     | Maya   |
+```
+
+### Transaction A: Counting Rahul’s Books
+
+```
+BEGIN;
+SELECT COUNT(*) FROM books WHERE author = 'Rahul';
+-- Result: 3
+```
+
+### Meanwhile… Transaction B Happens
+
+```
+BEGIN;
+INSERT INTO books (title, author)
+VALUES ('Journey to the Stars', 'Rahul');
+COMMIT;
+```
+
+Now Rahul technically has four books.
+
+```
+id | title                | author 
+ — — — — — — — — — — — — — — — — — — 
+ 1 | The Cosmic Path      | Rahul
+ 2 | Time and Beyond      | Rahul
+ 3 | Quantum Realms       | Rahul
+ 4 | The Hidden Life      | Maya
+ 5 | Journey to the Stars | Rahul
+(5 rows)
+```
+
+### Back to Transaction A
+
+That new book is a **phantom** — it wasn’t there when Transaction A first ran the query.
+
+Still inside Transaction A, the user now queries the list of books by Rahul
+
+```
+SELECT * FROM books WHERE author = ‘Rahul’;
+```
+
+```
+id | title                | author 
+ — — — — — — — — — — — — — — — — — — 
+ 1 | The Cosmic Path      | Rahul
+ 2 | Time and Beyond      | Rahul
+ 3 | Quantum Realms       | Rahul
+ 5 | Journey to the Stars | Rahul
+(4 rows)
+```
+
+### Why Phantom Reads Matter
+
+In real systems, phantom reads can quietly break logic:
+
+- Scheduling systems might double-book appointments.
+- Financial reports could show inconsistent totals.
+- Inventory systems might oversell limited stock.
+
+Any logic relying on a stable query result is vulnerable if phantom reads aren’t controlled.
+
+### Isolation Levels: Controlling the Chaos
+
+Transaction isolation levels are how databases determine visibility. Think of them as consistency “modes” that define how much your transaction can see while others are executing in parallel.
+
+Here’s what each standard SQL isolation level protects against:
+
+![](https://cdn-images-1.medium.com/proxy/1*wg9WQ4NGtIqkew6g_vTAkA.png)
+
+**Explanations:**
+
+- **Read Uncommitted**: Maximum concurrency, minimal safety. Even uncommitted data is visible. — *“****Let me see everything — even data that other transactions haven’t finished yet****.”*
+- **Read Committed**: Safer. Sees only committed data, but rows can still change mid-transaction. — ***“Only show me data that has been committed — but I’m okay if things change between queries.”***
+- **Repeatable Read**: Ensures rows don’t change during the transaction — but *new rows* might appear. — ***“Once I’ve read a row, I want it to stay the same — but I might still see new rows pop in.”***
+- **Serializable**: Highest consistency. All queries behave as if transactions run one after another. — *“****Pretend I’m the only person using this database right now. No interference allowed.”***
+
+### How to Fix the Bookstore
+
+Let’s rewrite Transaction A using a **SERIALIZABLE** isolation level:
+
+```
+BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+```
+
+```
+SELECT COUNT(*) FROM books WHERE author = 'Rahul';
+-- Returns 3
+```
+
+```
+SELECT * FROM books WHERE author = 'Rahul';
+-- Still returns 3
+```
+
+```
+COMMIT;
+```
+
+The database either queues conflicting transactions or forces retries. You get **no phantoms**.
+
+### Should You Always Use Serializable?
+
+No — SERIALIZABLE trades performance for consistency. It introduces overhead, potential locking, or retry loops. Use it when correctness is critical:
+
+- Financial reports or payment gateways
+- Appointment or ticket booking
+- Systems with strict inventory limits
+
+For many day-to-day applications, **READ COMMITTED** or **REPEATABLE READ** are good trade-offs — especially with compensating business logic.
+
+### Conclusion
+
+Phantom reads are the sneaky bugs that slip past in development but wreak havoc in production. They show up as silent data changes that break assumptions.
+
+If your application assumes data remains consistent between reads, phantom reads can corrupt that trust — and the consequences might only be visible *after* something breaks.
+
+### Further Reading
+
+- [Arpit Bhayani — Transaction Isolation Levels](https://www.linkedin.com/pulse/database-isolation-levels-arpit-bhayani/)
+- [Hussein Nasser — Isolation & Anomalies](https://husseinnasser.com/)
+- [PostgreSQL Docs — Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
+- [MySQL Docs — InnoDB Isolation](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html)
+- [SQL Server — Isolation Levels](https://learn.microsoft.com/en-us/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)

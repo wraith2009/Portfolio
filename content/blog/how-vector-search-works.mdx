@@ -1,0 +1,190 @@
+---
+title: "How Vector Search Works"
+date: "2025-03-07"
+description: "Ever wondered how search engines seem to ‘understand’ what you’re looking for — even when you don’t type the exact words?"
+tags: ["databases", "search", "AI", "algorithms"]
+published: true
+sourceUrl: "https://rahulbhardwaj09.medium.com/how-vector-search-works-1f965e167a63"
+mediumId: "1f965e167a63"
+---
+Ever wondered how search engines seem to ‘understand’ what you’re looking for — even when you don’t type the exact words? That’s the magic of vector search, which moves beyond your traditional and simple keyword matching to find meaning in data.
+
+### The Problem With Traditional Search
+
+Traditional search relies on matching exact words. Type “wireless headphones” and it looks for exactly those words — nothing more, nothing less.
+
+But what if the product is labeled “Bluetooth earbuds”? A traditional search might miss it completely, even though it’s exactly what you’re looking for!
+
+### What Vector Search Actually Is
+
+Vector search maps information into a multi-dimensional space, allowing systems to retrieve results based on semantic similarity (meaning) rather than exact word matches.
+
+In simple terms: **Vector search finds what you meant, not just what you typed.**
+
+### How It Works: Turning Words Into Numbers
+
+Before we explore vector search, let’s understand what vectors actually are:
+
+A vector is basically just a list of numbers that define a point in a multi-dimensional space. In vector search, we transform words and sentences into these number lists (we call them “embeddings”).
+
+For example, the sentence “I need headphones for traveling” might become:
+
+```
+[0.2, -0.5, 0.1, 0.7, -0.3, ...]
+```
+
+(This would actually continue for hundreds of numbers, but you get the idea!)
+
+The cool part? Similar concepts end up with similar numbers. So “wireless earbuds” and “Bluetooth headphones” would have vector representations that are close to each other in this mathematical space.
+
+### Measuring Similarity: How Vectors Are Compared
+
+Once information is converted to vectors, we need ways to determine how similar they are. Three key methods dominate vector search:
+
+### 1. Cosine Similarity
+
+Cosine similarity measures the angle between vectors, ignoring their magnitude. This is perfect for text search because it focuses on direction (meaning) rather than intensity.
+
+**Formula**: cos(θ) = (A·B)/(||A||·||B||)
+
+**Practical example**: Two product reviews might use different words but express the same sentiment. Cosine similarity would recognize this shared direction regardless of length or word frequency.
+
+**Visual representation**:
+
+- Two vectors pointing in nearly the same direction: High similarity (close to 1)
+- Two vectors at a 90° angle: No similarity (0)
+- Two vectors pointing in opposite directions: Negative similarity (-1)
+
+### 2. Euclidean Distance
+
+Measures the straight-line distance between vectors in space. Smaller distances indicate greater similarity.
+
+**Formula**: d(A,B) = √(Σ(Aᵢ — Bᵢ)²)
+
+**When it’s useful**: Image search and facial recognition, where the absolute positioning of features matters.
+
+### 3. Dot Product
+
+The dot product multiplies corresponding elements and sums them up, emphasizing both direction and magnitude.
+
+**Formula**: A·B = Σ(Aᵢ × Bᵢ)
+
+**When it’s useful**: When you want to give weight to both how similar items are and how strong their features are (useful in recommendation systems).
+
+### The Evolution of Embeddings: From Words to Meaning
+
+### Word-Level vs. Sentence-Level Embeddings
+
+Early vector search used word-level embeddings (like Word2Vec), where each word had its own vector:
+
+```
+"headphones" → [0.2, -0.1, 0.3, ...]
+"noise" → [0.1, 0.4, -0.2, ...]
+"canceling" → [-0.3, 0.1, 0.5, ...]
+```
+
+The problem? These missed context. “Bank” could refer to a financial institution or a riverside — the surrounding words matter!
+
+Modern approaches use transformer models (like BERT, GPT, and their derivatives) to create contextual embeddings that capture entire sentences or paragraphs as single vectors, preserving meaning.
+
+### What Each Dimension Represents
+
+Unlike simple coordinate systems where dimensions clearly represent height, width, etc., the dimensions in embedding vectors capture abstract semantic features:
+
+- Some dimensions might represent sentiment (positive/negative)
+- Others might capture formality level
+- Some track subject matter (technology, finance, health)
+- Others detect syntactic patterns
+
+Together, these dimensions form a “semantic fingerprint” that machines can compare
+
+### Why Vector Search Beats Traditional Keyword Search
+
+Let’s look at a practical example:
+
+If you search “How to fix a phone screen”, a traditional search engine will look for web pages with these exact words. If a page instead says “Repairing a broken smartphone display”, it might not show up — even though it’s exactly what you need!
+
+Vector search gets around this by understanding that “fix” and “repair” or “phone screen” and “smartphone display” have similar meanings. It captures the intent behind your search rather than just matching words.
+
+### The Challenge: When Vector Search Gets Confused
+
+Vector search isn’t perfect. Let me show you why with a simple example:
+
+Compare these sentences:
+
+1. “Rahul is using ChatGPT.”
+2. “Raman is eating chips.”
+
+At a technical level, these follow the same pattern: [Person] + [verb] + [object]
+
+Since vector embeddings capture patterns, these two completely different sentences might end up closer in vector space than they should be!
+
+Now look at: 3. “Rahul is chatting with an AI assistant.”
+
+Sentence #3 is much more related to #1 than #2 is, but vector search might miss this if it focuses too much on sentence structure.
+
+### Why Companies Use Hybrid Search Instead
+
+Because of these limitations, most companies don’t rely solely on vector search. Instead, they use hybrid search, combining:
+
+- **Traditional keyword search**: Finds exact word matches
+- **Vector search**: Finds results based on meaning
+
+### Real Example: Shopping for Headphones
+
+Imagine you’re shopping online and search for: “Wireless noise-canceling headphones”
+
+**With pure vector search, you might get:**
+
+- “Best Bluetooth audio devices for quiet environments” (Relevant, but doesn’t explicitly mention “headphones”)
+- “High-tech sound gadgets for travel” (Too broad)
+
+**With pure keyword search, you might get:**
+
+- “Cheap noise-canceling headphones with wires” (Matches words but ignores “wireless”)
+- “Wireless earbuds with no noise cancellation” (Misses key intent)
+
+**The problem?** Keyword search is too rigid, while vector search can be too loose.
+
+**Hybrid search solves this by combining both approaches!**
+
+### How Hybrid Search Actually Works
+
+Rather than picking just one method, companies:
+
+1. Use keyword search to ensure the most important terms (like “headphones”) are present
+2. Use vector search to understand intent and find semantically relevant results
+3. Rank results using a scoring system that considers both keyword matches and vector similarity
+
+This gives you the best of both worlds: precision AND understanding.
+
+### Who’s Using This Technology?
+
+- **E-commerce Platforms** (Amazon, Flipkart): To match product searches accurately
+- **Music & Video Streaming** (Spotify, Netflix): To recommend content based on what you might like
+- **Search Engines** (Google, Bing): To combine exact keyword matches with semantic meaning
+- **AI Chatbots** (ChatGPT, Google Bard): To find relevant knowledge across structured and unstructured data
+
+### The Bottom Line
+
+Vector search is incredibly powerful, but it’s not perfect on its own. That’s why modern search systems use hybrid approaches:
+
+- **Pure vector search** can return semantically relevant but imprecise results
+- **Pure keyword search** can return exact word matches but miss your intent
+- **Hybrid search** ensures both relevance AND accuracy
+
+This combination approach is what makes modern search engines so good at finding what you’re actually looking for, even when you don’t use the exact right words.Conclusion: Moving Beyond Keywords
+
+Vector search represents a fundamental shift in how we interact with information — moving from “what was said” to “what was meant.” As these technologies continue to mature, we can expect:
+
+- More intuitive search experiences across all platforms
+- Better content discovery without requiring perfect keyword knowledge
+- Increasingly personalized recommendations that understand nuanced preferences
+
+Whether you’re building the next search engine or simply trying to understand how modern AI systems find information, vector search is a critical technology that bridges the gap between human communication and machine processing.
+
+*Want to learn more? Check out these resources:*
+
+- [Pinecone’s Vector Database Documentation](https://www.pinecone.io/learn/)
+- [HuggingFace’s Sentence Transformers Library](https://www.sbert.net/)
+- [Facebook AI Similarity Search (FAISS)](https://github.com/facebookresearch/faiss)
