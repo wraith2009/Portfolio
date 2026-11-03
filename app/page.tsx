@@ -131,9 +131,9 @@ function ExperienceCard({ job, index }: { job: WorkExperience; index: number }) 
       transition={{ delay: index * 0.05 }}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="flex items-baseline justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors">
+      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors font-medium">
             {job.company}
           </span>
           <span className="text-[var(--text-subtle)] text-sm">
@@ -147,7 +147,7 @@ function ExperienceCard({ job, index }: { job: WorkExperience; index: number }) 
             ↓
           </motion.span>
         </div>
-        <span className="mono text-xs text-[var(--text-subtle)]">
+        <span className="mono text-xs text-[var(--text-subtle)] shrink-0">
           {job.period}
         </span>
       </div>
@@ -343,14 +343,14 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
               >
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                  <span className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors font-medium">
                     {project.name}
                     <span className="inline-block ml-2 opacity-0 group-hover:opacity-100 transition-opacity">
                       ↗
                     </span>
                   </span>
-                  <span className="mono text-xs text-[var(--text-faint)]">
+                  <span className="mono text-xs text-[var(--text-faint)] shrink-0">
                     {project.tech}
                   </span>
                 </div>
@@ -386,12 +386,12 @@ export default function Home() {
               >
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group flex items-baseline justify-between py-2 border-b border-[var(--border)] hover:border-[var(--border-hover)] transition-colors"
+                  className="group flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 py-3 border-b border-[var(--border)] hover:border-[var(--border-hover)] transition-colors"
                 >
-                  <span className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors">
+                  <span className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors leading-snug">
                     {post.title}
                   </span>
-                  <span className="mono text-xs text-[var(--text-subtle)] ml-4 shrink-0">
+                  <span className="mono text-xs text-[var(--text-subtle)] shrink-0">
                     {post.date}
                   </span>
                 </Link>

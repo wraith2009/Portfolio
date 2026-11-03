@@ -56,27 +56,27 @@ export default function BlogPage() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex items-baseline justify-between py-4 border-b border-[var(--border)] hover:border-[var(--border-hover)] transition-colors"
+              className="group block py-4 border-b border-[var(--border)] hover:border-[var(--border-hover)] transition-colors"
             >
-              <div className="flex-1 min-w-0 pr-4">
-                <h2 className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors mb-1">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
+                <h2 className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors font-medium leading-snug">
                   {post.title}
                 </h2>
-                <p className="text-sm text-[var(--text-subtle)] truncate">
-                  {post.description}
-                </p>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="mono text-xs text-[var(--text-faint)]">
+                    {post.readingTime}
+                  </span>
+                  <span className="mono text-xs text-[var(--text-subtle)]">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center gap-3 shrink-0">
-                <span className="mono text-xs text-[var(--text-faint)]">
-                  {post.readingTime}
-                </span>
-                <span className="mono text-xs text-[var(--text-subtle)]">
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    month: "short",
-                    year: "numeric",
-                  })}
-                </span>
-              </div>
+              <p className="text-sm text-[var(--text-subtle)] line-clamp-2">
+                {post.description}
+              </p>
             </Link>
           ))}
         </div>

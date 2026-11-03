@@ -90,7 +90,7 @@ export default async function BlogPost({ params }: Props) {
               <span>{post.readingTime}</span>
             </div>
             {post.tags.length > 0 && (
-              <div className="flex gap-2 mt-4">
+              <div className="flex flex-wrap gap-2 mt-4">
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
