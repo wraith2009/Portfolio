@@ -44,12 +44,12 @@ const workExperience: WorkExperience[] = [
     role: "Contractor",
     period: "Present",
     description: [
-      "Lead a team of three engineers across Spiegel Financial (financial platform) and WattChoice (electricity comparison & enrollment product)",
-      "Own backend architecture using Node.js, TypeScript and PostgreSQL — API contracts, code reviews and frontend integration handoffs",
-      "Build financial-data pipelines integrating Plaid, crypto exchanges and market-data providers for account sync, transaction attribution and reporting",
-      "Develop AI workflows for querying financial data and private documents using Amazon Bedrock, retrieval-based systems and MCP integrations",
-      "Build bill-processing, electricity-usage and provider-enrollment workflows integrating Smart Meter Texas, ComparePower and HubSpot",
-      "Own AWS infrastructure (ECS/Fargate, Lambda, S3, EventBridge) — deployments, monitoring, production issues and release coordination"
+      "Leading a team of three engineers across Spiegel Financial (financial platform) and WattChoice (electricity comparison & enrollment product)",
+      "Driving technical decisions and owning backend architecture using Node.js, TypeScript and PostgreSQL — API contracts, code reviews and frontend integration handoffs",
+      "Building financial-data pipelines integrating Plaid, crypto exchanges and market-data providers for account sync, transaction attribution and reporting",
+      "Developing AI workflows for querying financial data and private documents using Amazon Bedrock, retrieval-based systems and MCP integrations",
+      "Building bill-processing, electricity-usage and provider-enrollment workflows integrating Smart Meter Texas, ComparePower and HubSpot",
+      "Owning AWS infrastructure (ECS/Fargate, Lambda, S3, EventBridge) — deployments, monitoring, production issues and release coordination"
     ]
   },
   {
@@ -131,12 +131,12 @@ function ExperienceCard({ job, index }: { job: WorkExperience; index: number }) 
       transition={{ delay: index * 0.05 }}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-2">
-        <div className="flex items-center gap-2 flex-wrap">
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex items-center gap-2 flex-wrap min-w-0">
           <span className="text-[var(--text)] group-hover:text-[var(--text)] transition-colors font-medium">
             {job.company}
           </span>
-          <span className="text-[var(--text-subtle)] text-sm">
+          <span className="text-[var(--text-subtle)] text-sm hidden sm:inline">
             {job.role}
           </span>
           <motion.span
@@ -151,6 +151,9 @@ function ExperienceCard({ job, index }: { job: WorkExperience; index: number }) 
           {job.period}
         </span>
       </div>
+      <span className="text-[var(--text-subtle)] text-sm sm:hidden mt-1 block">
+        {job.role}
+      </span>
 
       <AnimatePresence>
         {isOpen && (
