@@ -44,12 +44,12 @@ const workExperience: WorkExperience[] = [
     role: "Contractor",
     period: "Present",
     description: [
-      "Leading a team of three engineers across Spiegel Financial (financial platform) and WattChoice (electricity comparison & enrollment product)",
-      "Driving technical decisions and owning backend architecture using Node.js, TypeScript and PostgreSQL — API contracts, code reviews and frontend integration handoffs",
-      "Building financial-data pipelines integrating Plaid, crypto exchanges and market-data providers for account sync, transaction attribution and reporting",
-      "Developing AI workflows for querying financial data and private documents using Amazon Bedrock, retrieval-based systems and MCP integrations",
-      "Building bill-processing, electricity-usage and provider-enrollment workflows integrating Smart Meter Texas, ComparePower and HubSpot",
-      "Owning AWS infrastructure (ECS/Fargate, Lambda, S3, EventBridge) — deployments, monitoring, production issues and release coordination"
+      "Lead a team of 3 engineers building Spiegel Financial and WattChoice, driving architecture decisions and owning the technical roadmap",
+      "Architected backend systems with Node.js, TypeScript, and PostgreSQL — designed API contracts, conducted code reviews, and coordinated frontend integrations",
+      "Built financial data pipelines integrating Plaid, crypto exchanges, and market-data providers, enabling real-time account sync and transaction attribution",
+      "Developed AI-powered workflows using Amazon Bedrock and retrieval-based systems to query financial data and private documents",
+      "Shipped bill-processing and provider-enrollment features integrating Smart Meter Texas, ComparePower, and HubSpot",
+      "Own AWS infrastructure (ECS/Fargate, Lambda, S3, EventBridge) — handle deployments, monitoring, and production incident response"
     ]
   },
   {
@@ -57,11 +57,11 @@ const workExperience: WorkExperience[] = [
     role: "Founding Full Stack Developer",
     period: "Dec 2024 — Jul 2025",
     description: [
-      "Led a six-person team building multiple services, translating product requirements into user flows, UX decisions and technical architecture",
-      "Owned backend development and infrastructure, connecting services and supporting end-to-end product delivery",
-      "Led CRM development to support consultant workflows",
-      "Built a recommendation engine delivering personalized suggestions from student profiles",
-      "Developed a modular payment service supporting billing and usage tracking"
+      "Led a 6-engineer team from zero to launch, translating product requirements into technical architecture and shipping multiple services",
+      "Architected and owned the entire backend infrastructure, establishing patterns for service communication and deployment",
+      "Built a CRM system that streamlined consultant workflows, reducing manual data entry",
+      "Designed a recommendation engine that delivered personalized course suggestions based on student profiles",
+      "Developed a modular payment service handling billing, subscriptions, and usage tracking"
     ],
     letter: "/experiment-labs-relieving-letter.pdf"
   },
@@ -70,8 +70,8 @@ const workExperience: WorkExperience[] = [
     role: "Full Stack Developer Intern",
     period: "Sep — Dec 2024",
     description: [
-      "Built a Next.js content management system for small businesses using modular, reusable components",
-      "Implemented and deployed payment processing, order management and user-role functionality"
+      "Built a Next.js CMS for small businesses with modular, reusable components — enabling non-technical users to manage content",
+      "Shipped payment processing, order management, and role-based access control from design to deployment"
     ]
   },
   {
@@ -79,8 +79,8 @@ const workExperience: WorkExperience[] = [
     role: "Full Stack Developer Intern",
     period: "May — Aug 2024",
     description: [
-      "Developed AI modules that generated negative test cases for REST APIs",
-      "Improved application UI/UX to make existing workflows clearer and easier to use"
+      "Developed AI-powered testing modules that auto-generated negative test cases for REST APIs, improving test coverage",
+      "Redesigned application workflows, simplifying navigation and reducing user friction"
     ]
   },
 ];
